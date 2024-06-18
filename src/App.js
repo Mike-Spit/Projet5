@@ -24,30 +24,13 @@
 
 // export default App;
 
-import React, { useState, useEffect } from "react";
+// src/App.js
+import React from "react";
+import Router from "./Router";
+import "./App.scss";
 
 function App() {
-  const [properties, setProperties] = useState([]);
-
-  useEffect(() => {
-    fetch("/logements.json")
-      .then((response) => response.json())
-      .then((data) => setProperties(data))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
-
-  return (
-    <div className="App">
-      <h1>Liste des biens immobiliers</h1>
-      <ul>
-        {properties.map((property) => (
-          <li key={property.id}>
-            {property.name} - {property.location}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;
