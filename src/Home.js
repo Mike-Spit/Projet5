@@ -17,7 +17,7 @@ function Home() {
       <ul>
         {properties.map((property) => (
           <li key={property.id}>
-            {property.name} - {property.location}
+            {property.title} - {property.location}
           </li>
         ))}
       </ul>
