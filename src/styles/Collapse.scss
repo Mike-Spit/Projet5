@@ -1,0 +1,40 @@
+/* src/styles/Collapse.scss */
+
+.collapse {
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  &__header {
+    background-color: #ff6060;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .collapse__title {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .collapse__arrow {
+      width: 20px;
+      transition: transform 0.3s ease;
+
+      &--up {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    font-size: 1rem;
+    color: #ff6060;
+    line-height: 1.4;
+  }
+}
