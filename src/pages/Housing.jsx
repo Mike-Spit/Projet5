@@ -13,7 +13,7 @@ function Housing() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("../assets/json/housing.json${id}")
+    fetch(`../assets/json/housing.json${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Network error: ${response.status}`);
