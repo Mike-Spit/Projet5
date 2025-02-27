@@ -13,7 +13,7 @@ function Housing() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`../assets/json/housing.json${id}`)
+    fetch("../logements.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Network error: ${response.status}`);
@@ -21,7 +21,8 @@ function Housing() {
         return response.json();
       })
       .then((data) => {
-        setLogement(data);
+        const datalogement = data.find((logement) => logement.id === id);
+        setLogement(datalogement);
         setLoading(false);
       })
       .catch((err) => {
@@ -42,7 +43,7 @@ function Housing() {
     return <Navigate to="/404" />;
   }
 
-  // Extraction des champs depuis la réponse du backend
+  // Extraction des champs depuis la réponse du json
   const {
     title,
     location,

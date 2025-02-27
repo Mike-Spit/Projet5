@@ -26,7 +26,7 @@
 
 // src/App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 
@@ -39,7 +39,7 @@ import "./styles/App.scss";
 
 function App() {
   return (
-    <Router>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -48,7 +48,7 @@ function App() {
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 

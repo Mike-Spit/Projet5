@@ -12,7 +12,7 @@ function Home() {
 
   useEffect(() => {
     // Remplace l’URL par celle de ton backend
-    fetch("../assets/json/housing.json")
+    fetch("logements.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Network error: ${response.status}`);
