@@ -1,8 +1,8 @@
 // src/components/Banner.js
 
 import React from "react";
-import "../styles/Banner.scss";
-import bannerImage from "../assets/banner_home.jpg"; // Adapte si besoin
+import "../../styles/Banner.scss";
+import bannerImage from "../../assets/images/banner-home.png";
 
 function Banner() {
   return (

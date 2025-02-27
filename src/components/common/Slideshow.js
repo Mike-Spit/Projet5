@@ -1,9 +1,9 @@
 // src/components/Slideshow.js
 
 import React, { useState } from "react";
-import "../styles/Slideshow.scss";
-import arrowLeft from "../assets/arrow_left.svg";
-import arrowRight from "../assets/arrow_right.svg";
+import "../../styles/Slideshow.scss";
+import arrowLeft from "../../assets/images/arrow_left.png";
+import arrowRight from "../../assets/images/arrow_right.png";
 
 function Slideshow({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);

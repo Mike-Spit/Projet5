@@ -13,7 +13,7 @@ function Housing() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/logements/${id}")
+    fetch("../assets/json/housing.json${id}")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Network error: ${response.status}`);
@@ -35,12 +35,10 @@ function Housing() {
   }
 
   if (error) {
-    // Selon ta logique, tu peux afficher un message ou rediriger
     return <p>Erreur : {error}</p>;
   }
 
   if (!logement) {
-    // Si on n’a rien reçu du backend
     return <Navigate to="/404" />;
   }
 

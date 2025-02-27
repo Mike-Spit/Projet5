@@ -1,8 +1,8 @@
 // src/components/Footer.js
 
 import React from "react";
-import "../styles/Footer.scss";
-import logo from "../assets/logo_footer.png"; // Adapte si besoin
+import "../../styles/Footer.scss";
+import logo from "../../assets/images/logo-footer.png";
 
 function Footer() {
   return (

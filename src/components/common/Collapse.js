@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import "../../styles/Collapse.scss";
-import arrow from "../assets/arrow_collapse.svg"; // Adapte si besoin
+import ArrowIcon from "./ArrowIcon";
 
 function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,13 +13,7 @@ function Collapse({ title, children }) {
     <div className="collapse">
       <div className="collapse__header" onClick={toggle}>
         <h2 className="collapse__title">{title}</h2>
-        <img
-          src={arrow}
-          alt="toggle"
-          className={
-            isOpen ? "collapse__arrow collapse__arrow--up" : "collapse__arrow"
-          }
-        />
+        <ArrowIcon />
       </div>
       {isOpen && <div className="collapse__content">{children}</div>}
     </div>

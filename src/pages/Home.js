@@ -1,8 +1,8 @@
 // src/pages/Home.js
 
 import React, { useEffect, useState } from "react";
-import Banniere from "../components/Banniere";
-import Card from "../components/Card";
+import Banner from "../components/common/Banner";
+import Card from "../components/common/Card";
 import "../styles/Home.scss";
 
 function Home() {
@@ -12,7 +12,7 @@ function Home() {
 
   useEffect(() => {
     // Remplace l’URL par celle de ton backend
-    fetch("/logements.js")
+    fetch("../assets/json/housing.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Network error: ${response.status}`);
@@ -39,7 +39,7 @@ function Home() {
 
   return (
     <main className="home">
-      <Banniere />
+      <Banner />
       <section className="home__gallery">
         {logements.map((logement) => (
           <Card

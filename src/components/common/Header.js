@@ -2,8 +2,8 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/Header.scss";
-import logo from "../assets/logo.png"; // Adapte si besoin
+import "../../styles/Header.scss";
+import logo from "../../assets/images/logo.png";
 
 function Header() {
   return (
