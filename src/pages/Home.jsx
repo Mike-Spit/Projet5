@@ -11,7 +11,6 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Remplace l’URL par celle de ton backend
     fetch("logements.json")
       .then((response) => {
         if (!response.ok) {
