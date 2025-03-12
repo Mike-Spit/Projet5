@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Banner from "../components/common/Banner";
+import bannerHome from "../assets/images/banner-home.png";
 import Card from "../components/common/Card";
 import "../styles/Home.scss";
 
@@ -38,16 +39,18 @@ function Home() {
 
   return (
     <main className="home">
-      <Banner />
-      <section className="home__gallery">
-        {logements.map((logement) => (
-          <Card
-            key={logement.id}
-            id={logement.id}
-            cover={logement.cover}
-            title={logement.title}
-          />
-        ))}
+      <Banner imageSrc={bannerHome} text="Chez vous, partout et ailleurs" />
+      <section className="home__vignettes-container">
+        <div className="home__gallery">
+          {logements.map((logement) => (
+            <Card
+              key={logement.id}
+              id={logement.id}
+              cover={logement.cover}
+              title={logement.title}
+            />
+          ))}
+        </div>
       </section>
     </main>
   );

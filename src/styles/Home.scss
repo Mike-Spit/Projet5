@@ -1,14 +1,28 @@
 /* src/styles/Home.scss */
 
+@import "variables";
+
 .home {
   width: 90%;
-  max-width: 1200px;
+  max-width: $max-width-site;
   margin: 0 auto;
+
+  &__vignettes-container {
+    background-color: $color-bg-light; // #f7f7f7
+    border-radius: $border-radius-global;
+    padding: 2rem;
+    margin-top: 30px;
+  }
 
   &__gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 3rem;
-    margin: 40px 0;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    &__gallery {
+      grid-template-columns: 1fr;
+    }
   }
 }

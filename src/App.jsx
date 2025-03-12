@@ -41,12 +41,14 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/housing/:id" element={<Housing />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/housing/:id" element={<Housing />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </div>
       <Footer />
     </>
   );

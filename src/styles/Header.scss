@@ -1,8 +1,10 @@
 /* src/styles/Header.scss */
 
+@import "variables";
+
 .header {
   width: 90%;
-  max-width: 1200px;
+  max-width: $max-width-site;
   margin: 0 auto;
   padding: 20px 0;
   display: flex;
@@ -20,13 +22,17 @@
   }
 
   &__link {
+    color: $color-text-dark; /* #000 */
     text-decoration: none;
-    font-size: 1.2rem;
-    color: #ff6060;
+    font-size: 1rem;
     transition: color 0.3s ease;
 
     &:hover {
-      color: #f30;
+      color: $color-primary; /* #ff6060 au survol */
+    }
+
+    &--active {
+      text-decoration: underline; /* Lien actif souligné */
     }
   }
 }

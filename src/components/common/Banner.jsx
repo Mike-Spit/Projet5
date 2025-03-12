@@ -1,14 +1,13 @@
-// src/components/Banner.js
+// src/components/Banner.jsx
 
 import React from "react";
 import "../../styles/Banner.scss";
-import bannerImage from "../../assets/images/banner-home.png";
 
-function Banner() {
+function Banner({ imageSrc, text }) {
   return (
     <section className="banner">
-      <img src={bannerImage} alt="Banner" className="banner__image" />
-      <h2 className="banner__text">Chez vous, partout et ailleurs</h2>
+      <img src={imageSrc} alt="Banner" className="banner__image" />
+      {text && <h2 className="banner__text">{text}</h2>}
     </section>
   );
 }

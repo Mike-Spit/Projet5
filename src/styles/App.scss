@@ -1,86 +1,25 @@
-// .App {
-//   text-align: center;
-// }
+/* src/styles/App.scss */
 
-// .App-logo {
-//   height: 40vmin;
-//   pointer-events: none;
-// }
+@import "variables";
 
-// @media (prefers-reduced-motion: no-preference) {
-//   .App-logo {
-//     animation: App-logo-spin infinite 20s linear;
-//   }
-// }
-
-// .App-header {
-//   background-color: #282c34;
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   color: white;
-// }
-
-// .App-link {
-//   color: #61dafb;
-// }
-
-// @keyframes App-logo-spin {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
-
-// src/App.scss
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: white;
-  color: black;
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  nav {
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-
-      li {
-        margin: 0;
-
-        a {
-          color: black;
-          text-decoration: none;
-        }
-      }
-    }
-  }
+/* 1. Réinitialisation basique */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: $font-size-base;
 }
 
-footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+/* 2. Layout en flex pour coller le footer en bas */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+}
 
-  .logo {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    margin: 0;
-  }
+/* 3. Un conteneur principal qui prend l'espace restant (pour pousser le footer en bas) */
+.main-content {
+  flex: 1;
 }
