@@ -3,9 +3,10 @@
   max-width: 1200px;
   margin: 0 auto;
 
-  &__collapse {
+  &__collapses {
     width: 75%;
-    padding-top: 40px;
+    margin: 0 auto;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
