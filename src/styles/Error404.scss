@@ -6,31 +6,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 75vh; /* Pour occuper toute la hauteur de la page en responsive */
+  min-height: 75vh;
   gap: 50px;
-  text-align: center; /* pour centrer le texte */
-
-  /* Couleur par défaut (par ex. la color primary, 
-     si tu la veux sur les titres) */
+  text-align: center;
   color: variables.$color-primary;
 
   &__title {
     font-size: 130px;
-    margin: 40px 0 20px 0; /* un peu d'espace en haut/bas */
+    margin: 40px 0 20px 0;
   }
 
   &__description {
     margin: 20px 0;
-    width: 60%; /* ajuster selon ta maquette */
-    font-size: 1.2rem; /* ajuster selon ta maquette */
+    width: 60%;
+    font-size: 1.2rem;
   }
 
   &__return {
     margin: 20px 0;
     text-decoration: underline;
     cursor: pointer;
-
-    /* On veut ce lien en noir : */
     color: #000;
   }
 }

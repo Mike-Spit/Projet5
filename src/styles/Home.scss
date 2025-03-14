@@ -2,23 +2,20 @@
 
 @import "variables";
 
-/* src/styles/Home.scss */
-
 .home {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 
   &__vignettes-container {
-    background-color: #f7f7f7; /* Fond gris sur Desktop */
+    background-color: #f7f7f7;
     border-radius: 10px;
     padding: 2rem;
     margin: 30px 0;
 
     @media (max-width: 768px) {
-      /* Sur mobile, on enlève ce fond gris */
       background-color: transparent;
-      padding: 1rem; /* moins de padding */
+      padding: 1rem;
       margin-top: 20px;
     }
   }

@@ -2,12 +2,11 @@
 
 .banner {
   position: relative;
-  height: 170px; /* Ajuste selon la maquette Figma */
+  height: 170px;
   margin-top: 20px;
-  border-radius: 15px; /* p6-kasa mentionne souvent 10px */
+  border-radius: 15px;
   overflow: hidden;
 
-  /* On fait un conteneur flex pour centrer (ou pas) le texte */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,27 +19,23 @@
     height: 100%;
     object-fit: cover;
     filter: brightness(40%);
-    /* Règle la valeur à 0.3 (~30%) pour un fort assombrissement
-       => plus la valeur est faible, plus c’est sombre (ex. 0.4, 0.5). */
   }
 
   &__text {
     position: relative;
-    z-index: 1; /* Pour être au-dessus de l’image */
+    z-index: 1;
     color: #fff;
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    text-align: center; /* Centré horizontalement */
+    text-align: center;
     max-width: 67%;
   }
 
   @media (max-width: 768px) {
-    height: 130px; /* plus petit en mobile */
-
-    /* Si tu veux un alignement à gauche en mobile, modifie ici : */
+    height: 130px;
     justify-content: flex-start;
-    padding-left: 20px; /* décale le texte vers la gauche */
+    padding-left: 20px;
 
     &__text {
       font-size: 1.5rem;

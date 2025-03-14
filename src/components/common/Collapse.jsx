@@ -16,9 +16,7 @@ function Collapse({ title, children }) {
         <ArrowIcon className={`collapse__arrow ${isOpen ? "is-open" : ""}`} />
       </div>
 
-      {/* 1er conteneur (animateur) */}
       <div className={`collapse__content ${isOpen ? "is-open" : ""}`}>
-        {/* 2e conteneur (inner) : padding, fond gris, etc. */}
         <div className="collapse__content-inner">{children}</div>
       </div>
     </div>

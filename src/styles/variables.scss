@@ -1,15 +1,12 @@
 /* src/styles/variables.scss */
 
-/* Couleurs extraites ou adaptées de la maquette Figma Kasa */
-$color-primary: #ff6060; /* Rouge Kasa */
-$color-bg-light: #f7f7f7; /* Fond gris très léger */
-$color-text-dark: #000; /* Noir pour le texte */
-$color-text-light: #fff; /* Blanc pour le texte */
+$color-primary: #ff6060;
+$color-bg-light: #f7f7f7;
+$color-text-dark: #000;
+$color-text-light: #fff;
 
-/* Typographie */
-$font-family-base: "Montserrat", sans-serif; /* Ex. maquette Figma */
-$font-size-base: 1rem; /* Correspond à 16px */
+$font-family-base: "Montserrat", sans-serif;
+$font-size-base: 1rem;
 
-/* Autres variables (arrondis, z-index, breakpoints) */
 $border-radius-global: 10px;
 $max-width-site: 1200px;

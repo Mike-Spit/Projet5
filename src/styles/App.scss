@@ -2,7 +2,6 @@
 
 @import "variables";
 
-/* 1. Réinitialisation basique */
 html,
 body {
   margin: 0;
@@ -12,14 +11,12 @@ body {
   font-size: $font-size-base;
 }
 
-/* 2. Layout en flex pour coller le footer en bas */
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+  min-height: 100vh;
 }
 
-/* 3. Un conteneur principal qui prend l'espace restant (pour pousser le footer en bas) */
 .main-content {
   flex: 1;
 }

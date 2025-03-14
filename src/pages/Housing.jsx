@@ -43,7 +43,6 @@ function Housing() {
     return <Navigate to="/404" />;
   }
 
-  // Extraction des champs depuis la réponse du json
   const {
     title,
     location,
@@ -55,7 +54,6 @@ function Housing() {
     pictures = [],
   } = logement;
 
-  // Pour afficher les étoiles (0 à 5)
   const stars = [1, 2, 3, 4, 5];
 
   return (
