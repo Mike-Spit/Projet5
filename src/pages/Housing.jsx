@@ -78,7 +78,7 @@ function Housing() {
             <p>{host.name}</p>
             <img src={host.picture} alt={host.name} />
           </div>
-          <div className="housing__rating">
+          <div className="housing__host__rating">
             {stars.map((star) => (
               <span
                 key={star}

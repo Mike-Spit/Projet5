@@ -2,27 +2,35 @@
 
 @import "variables";
 
+/* src/styles/Home.scss */
+
 .home {
   width: 90%;
-  max-width: $max-width-site;
+  max-width: 1200px;
   margin: 0 auto;
 
   &__vignettes-container {
-    background-color: $color-bg-light; // #f7f7f7
-    border-radius: $border-radius-global;
+    background-color: #f7f7f7; /* Fond gris sur Desktop */
+    border-radius: 10px;
     padding: 2rem;
-    margin-top: 30px;
+    margin: 30px 0;
+
+    @media (max-width: 768px) {
+      /* Sur mobile, on enlève ce fond gris */
+      background-color: transparent;
+      padding: 1rem; /* moins de padding */
+      margin-top: 20px;
+    }
   }
 
   &__gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
-  }
 
-  @media (max-width: 768px) {
-    &__gallery {
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
   }
 }

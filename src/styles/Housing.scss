@@ -5,11 +5,10 @@
   max-width: 1200px;
   margin: 0 auto;
 
+  /* ----- HEADER (Titre, Lieu, Tags, Host, Rating) ----- */
   &__header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 20px 0;
+    flex-wrap: wrap; /* Mobile-first approach */
   }
 
   &__info {
@@ -17,12 +16,12 @@
       margin: 0 0 10px 0;
       font-size: 2rem;
       font-weight: 500;
+      color: #ff6060; /* Titre en rouge */
     }
-
     p {
       margin: 0 0 15px 0;
       font-size: 1.2rem;
-      color: #ff6060;
+      color: #000; /* Localisation en noir */
     }
   }
 
@@ -33,27 +32,34 @@
     .housing__tag {
       background-color: #ff6060;
       color: #fff;
-      padding: 5px 10px;
+      padding: 5px 15px;
       border-radius: 5px;
       font-size: 0.9rem;
     }
   }
 
   &__host {
+    order: 2;
+    width: 100%;
+    margin-top: 1rem;
+
+    /* Mobile par défaut : row => rating à gauche, host-info à droite */
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
 
     &-info {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.5rem;
+      order: 2; /* Sur mobile, c’est le bloc de droite */
       p {
-        margin: 0 0 5px 0;
+        margin: 0;
+        color: #ff6060; /* Host name en rouge */
         text-align: right;
       }
-
       img {
         width: 50px;
         height: 50px;
@@ -61,8 +67,8 @@
         border-radius: 50%;
       }
     }
-
     &__rating {
+      order: 1; /* Sur mobile, rating à gauche */
       .star {
         font-size: 1.5rem;
         margin-left: 5px;
@@ -76,13 +82,77 @@
     }
   }
 
+  /* ----- COLLAPSES (Description, Équipements) ----- */
   &__collapses {
     margin-top: 30px;
     display: flex;
-    gap: 40px;
+    flex-direction: column; /* Mobile first */
 
-    @media (max-width: 768px) {
+    /* Sur le texte interne de la collapse (optionnel) */
+    .collapse__content,
+    .collapse__content p {
+      color: #000;
+    }
+
+    /* On retire les puces pour la liste d’équipements */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  /* ----- Version Desktop (≥769px) ----- */
+  @media (min-width: 769px) {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    &__info {
+      order: 1;
+      width: auto;
+      margin-bottom: 0;
+    }
+    &__host {
+      order: 2;
+      width: auto;
+      margin-top: 0;
+      display: flex;
       flex-direction: column;
+      align-items: flex-end;
+
+      &-info {
+        order: 1;
+        margin-bottom: 0.5rem;
+      }
+      &__rating {
+        order: 2;
+      }
+    }
+    &__collapses {
+      /* 2 colonnes : Description et Équipements */
+      flex-direction: row;
+      gap: 40px;
+      > * {
+        flex: 1;
+      }
+    }
+  }
+
+  /* ----- Version Mobile (<769px) ----- */
+  @media (max-width: 768px) {
+    &__header {
+      flex-wrap: wrap;
+    }
+    &__info {
+      order: 1;
+      width: 100%;
+    }
+    &__host {
+      order: 2;
+      width: 100%;
+      margin-top: 1rem;
     }
   }
 }

@@ -1,4 +1,4 @@
-// src/components/Collapse.js
+// src/components/common/Collapse.jsx
 
 import React, { useState } from "react";
 import "../../styles/Collapse.scss";
@@ -10,12 +10,15 @@ function Collapse({ title, children }) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="collapse">
+    <div className={`collapse ${isOpen ? "is-open" : ""}`}>
       <div className="collapse__header" onClick={toggle}>
         <h2 className="collapse__title">{title}</h2>
-        <ArrowIcon />
+        <ArrowIcon className={isOpen ? "is-open" : ""} />
       </div>
-      {isOpen && <div className="collapse__content">{children}</div>}
+
+      <div className={`collapse__content ${isOpen ? "is-open" : ""}`}>
+        {children}
+      </div>
     </div>
   );
 }
