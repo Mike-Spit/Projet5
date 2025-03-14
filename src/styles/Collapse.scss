@@ -9,13 +9,7 @@
     align-items: center;
     margin-bottom: 0;
     padding: 10px 20px;
-
-    /* Arrondi seulement en haut,
-       le bas du header n’est pas arrondi,
-       pour qu’on ait un “bloc” plus uni
-       si la collapse ne fait pas de border-top. */
-    border-radius: 10px 10px 0 0;
-
+    border-radius: 10px 10px 5px 5px;
     background-color: #ff6060;
     color: #fff;
     cursor: pointer;
@@ -34,29 +28,19 @@
   }
 
   &__content {
-    /* Arrondi seulement en bas 
-       pour donner l’impression d’un bloc
-       si on veut un “bloc complet”.
-       On retire le border-top si on veut la sensation 
-       qu'il n’y a pas de séparation 
-    */
     border-radius: 0 0 10px 10px;
     border-top: none;
 
     overflow: hidden;
     max-height: 0;
-    padding: 20px 20px;
+    padding: 0 20px;
     background-color: #f6f6f6;
     color: #000;
-
-    /* On garde l'animation sur max-height 
-       sans animer le padding 
-       pour éviter l’à-coup. */
     transition: max-height 0.3s ease;
 
     &.is-open {
-      max-height: 500px; /* Ajuste selon la quantité de texte possible */
-      /* padding: 20px; // On supprime le changement de padding pour éviter l’à-coup */
+      max-height: 500px;
+      padding: 20px;
     }
   }
 }
