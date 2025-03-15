@@ -1,71 +1,109 @@
-# Getting Started with Create React App
+# Kasa - Projet 5 (OpenClassrooms)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce projet est une application d’agence immobilière construite en React, dans le cadre de la formation Développeur Web JavaScript/React. Elle permet de visualiser une liste de logements, leur détail (carrousel d’images, rating, etc.), une page À propos, et une page d’erreur 404 pour toute route inexistante.
 
-## Available Scripts
+## Sommaire
 
-In the project directory, you can run:
+1. [Fonctionnalités](#fonctionnalités)
+2. [Installation](#installation)
+3. [Utilisation](#utilisation)
+4. [Aperçu / Screenshots](#aperçu--screenshots)
+5. [Technologies](#technologies)
+6. [Architecture](#architecture)
+7. [Crédits](#crédits)
 
-### `npm start`
+## Fonctionnalités
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Accueil** : affiche la liste des logements avec un aperçu (image, titre).
+- **Page Logement** : détail d’un logement (carrousel d’images, infos du propriétaire, rating, tags, description, équipements, etc.).
+- **Page À propos** : plusieurs sections repliables (collapses) décrivant la philosophie de Kasa (Fiabilité, Respect, Service, Sécurité).
+- **Page 404** : s’affiche en cas de route inexistante ou d’ID non trouvé.
+- **Responsivité** : le site s’adapte aux écrans desktop et mobile.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Cloner ce dépôt :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   git clone https://github.com/Mike-Spit/Projet5.git
 
-### `npm run build`
+2. Se rendre dans le dossier du projet :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   cd Projet5
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Installer les dépendances :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   npm install
 
-### `npm run eject`
+4. Lancer l’application :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+L’application se lancera à l’adresse http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Utilisation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Accueil (Home)** : liste des logements avec un visuel.
+- **Logement** : en cliquant sur un logement, vous accédez à la page “Housing” avec toutes les infos détaillées.
+- **À propos (About)** : texte repliable (collapses) décrivant divers aspects de Kasa.
+- **404** : toute route non définie renvoie vers la page d’erreur.
 
-## Learn More
+Pour modifier les données (logements, etc.), éditez le fichier logements.json (public/logements.json).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Aperçu / Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Accueil**  
+   ![Accueil](./screenshots/home.png)
 
-### Code Splitting
+2. **Détail d’un logement**  
+   ![Logement détail](./screenshots/housing.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Page À propos**  
+   ![About](./screenshots/about.png)
 
-### Analyzing the Bundle Size
+4. **404**  
+   ![404 Error](./screenshots/404.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies
 
-### Making a Progressive Web App
+- React (Create React App)
+- React Router
+- Sass (SCSS)
+- Node.js / npm pour la gestion des dépendances
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Architecture
 
-### Advanced Configuration
+Ci-dessous, un aperçu de l’arborescence :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    Projet5/
+    ├── public/
+    │   ├── logements.json
+    │   └── ...
+    ├── src/
+    │   ├── assets/
+    │   │   └── images/ (bannières, flèches, etc.)
+    │   ├── components/
+    │   │   └── common/ (Collapse, Slideshow, Banner, etc.)
+    │   ├── pages/
+    │   │   ├── Home.jsx
+    │   │   ├── About.jsx
+    │   │   ├── Housing.jsx
+    │   │   └── Error404.jsx
+    │   ├── styles/
+    │   │   ├── variables.scss
+    │   │   ├── Home.scss
+    │   │   ├── About.scss
+    │   │   ├── Housing.scss
+    │   │   ├── Error404.scss
+    │   │   └── ...
+    │   ├── App.js
+    │   ├── index.js
+    │   └── ...
+    └── package.json
 
-### Deployment
+## Crédits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Formation : OpenClassrooms — Parcours Développeur Web JavaScript/React
+- Design : Maquette Kasa (fournie par OC)
+- Auteur : [Mike-Spit](https://github.com/Mike-Spit)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Projet5
+**Merci d’utiliser l’application Kasa !** N’hésitez pas à créer une issue ou un pull request si vous constatez un bug ou souhaitez proposer une amélioration.
