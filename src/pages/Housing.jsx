@@ -13,7 +13,7 @@ function Housing() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("../logements.json")
+    fetch(`${process.env.PUBLIC_URL}/logements.json`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Network error: ${response.status}`);
