@@ -9,6 +9,7 @@ function Card({ id, cover, title }) {
     <article className="card">
       <Link to={`/housing/${id}`} className="card__link">
         <img src={cover} alt={title} className="card__image" />
+        <div className="card__overlay"></div> {/* Ajout du gradient */}
         <h3 className="card__title">{title}</h3>
       </Link>
     </article>
